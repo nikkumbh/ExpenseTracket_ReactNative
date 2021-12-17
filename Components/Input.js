@@ -25,12 +25,14 @@ const Input = (props) => {
             style={styles.amount}
           />
         </View>
+        <View style={styles.descriptionContainer}>
         <TextInput
           placeholder="Enter Description"
           value={enteredDescription}
           onChangeText={handleDescription}
           style={styles.description}
         />
+        </View>
       </View>
       <View style={styles.buttonContainer}>
           <View style={styles.expense}>
@@ -64,20 +66,25 @@ const styles = StyleSheet.create({
   },
   amount: {
     marginTop: 15,
-    borderWidth: 1,
+    borderWidth: 2,
     borderRadius: 10,
-    height: 50,
-    borderWidth: 1,
-    width: "40%",
+    height: 40,
+    width: "45%",
     textAlign: "center",
+    fontSize: 17,
   },
   amountContainer: {
     alignItems: "center",
+  },
+  descriptionContainer:{
+    marginVertical: 10,
   },
   description: {
     marginVertical: 10,
     marginBottom: 10,
     borderBottomWidth: 2,
+    marginVertical: 10,
+    fontSize: 20,
   },
   buttonContainer: {
     flexDirection: "row",

@@ -40,18 +40,19 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>-----------EXPENSE TRACKER------------</Text>
-
-      <View>
-        <Text>Amount Left :{inc - exp} </Text>
-        <Text>Total Expendature:{exp} </Text>
+      <View style={styles.headingContainer}>
+      <Text style={styles.heading}>EXPENSE TRACKER</Text>
+      </View>
+      <View style={styles.textContainer}>
+        <Text style= {styles.amountText}>Amount Left: {inc - exp} </Text>
+        <Text style= {styles.expenditureText}>Total Expenses: {exp} </Text>
       </View>
 
       <Input funcAsPropsExp={handleExpense} funcAsPropsInc={handleIncome} />
       <View style={styles.listContainer}>
 
         <View style={styles.expenseContainer}>
-          <Text>.......EXPENSE....</Text>
+          <Text style={styles.expenseText}>EXPENSE</Text>
           <FlatList
             keyExtractor={(item, index) => index}
             data={storeExpense}
@@ -60,7 +61,7 @@ export default function App() {
         </View>
 
         <View style={styles.incomeContainer}>
-          <Text>.......INCOME....</Text>
+          <Text style={styles.incomeText}>INCOME</Text>
           <FlatList
             keyExtractor={(item, index) => index}
             data={storeIncome}
@@ -73,33 +74,74 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+
   container: {
     marginTop: 40,
-    paddingTop: 40,
+    paddingTop: 10,
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: '#BBFDFC',
   },
+  headingContainer: {
+    borderBottomWidth: 3,
+    marginBottom : 40,
+  },
+  heading: {
+    // borderBottomWidth: 5,
+    fontSize: 30,
+  },
+  textContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+    paddingTop: 10,
+    marginBottom: 10,
+  },
+  amountText: {
+    fontSize: 20,
+    position: 'absolute',
+    left: 10,
+    right: 270,
+    textAlign : 'center',
+  },
+  expenditureText: {
+    fontSize: 20,
+    position: 'absolute',
+    right: 10,
+    left: 250,
+    textAlign : 'center',
+  },
   listContainer: {
     flex: 3,
     flexDirection: 'row',
-    borderWidth: 3,
     width: "100%",
     justifyContent : 'space-around',
+    borderTopWidth: 3,
+    marginVertical: 10,
+  },
+  expenseText: {
+    fontSize: 20,
+    fontStyle : 'italic'
+  },
+  incomeText: {
+    fontSize: 20,
+    fontStyle : 'italic'
   },
   incomeContainer: {
-    width: '45%',
+    width: '48%',
     marginTop: 10,
-    borderLeftWidth: 1,
+    borderLeftWidth: 2,
     paddingLeft: 5,
+    alignItems : 'center',
   
   },
   expenseContainer: {
     marginTop: 10,
     width: '45%',
-   
+    alignItems: 'center',
 
   },
 });
