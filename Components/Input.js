@@ -48,7 +48,6 @@ const Input = (props) => {
           color = 'white'
           title="Income"
           onPress={() => props.funcAsPropsInc(amount, enteredDescription)}
-          
         />
         </View>
       </View>

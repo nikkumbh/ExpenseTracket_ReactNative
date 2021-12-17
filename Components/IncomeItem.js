@@ -24,5 +24,6 @@ const styles = StyleSheet.create({
   },
   desc: {
     alignItems: "flex-end",
+    
   },
 });
