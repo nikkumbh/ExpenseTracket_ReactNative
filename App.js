@@ -122,7 +122,8 @@ const styles = StyleSheet.create({
     justifyContent : 'space-around',
     borderWidth: 3,
     marginVertical: 10,
-    backgroundColor: Color.ternary,
+    
+    backgroundColor: 'white',
     borderRadius: 8,
   },
   expenseText: {
@@ -149,12 +150,14 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 0.6,
     borderWidth: 3,
+    backgroundColor: Color.ternary,
   
   },
   expenseContainer: {
     marginTop: 10,
     width: '45%',
     alignItems: 'center',
+    backgroundColor: Color.ternary,
     // borderWidth: 3,
 
   },
