@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, View, TextInput, Button } from "react-native";
+import Color from "../constants/Color";
+
 
 const Input = (props) => {
   const [amount, setAmount] = useState();
@@ -59,13 +61,25 @@ export default Input;
 
 const styles = StyleSheet.create({
   inputContainer: {
+    
     flex: 1,
     width: "70%",
-    paddingTop: 30,
+    // paddingTop: 20,
+    marginTop: 60,
+    paddingBottom: 20,
+    paddingHorizontal: 10,
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 3},
+    shadowRadius : 6,
+    shadowOpacity: 0.7,
+    borderRadius: 10,
+    backgroundColor: Color.ternary,
   },
   amount: {
     marginTop: 15,
     borderWidth: 2,
+    borderColor: Color.secondary,
+    color: Color.primary,
     borderRadius: 10,
     height: 40,
     width: "45%",
@@ -82,6 +96,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginBottom: 10,
     borderBottomWidth: 2,
+    borderColor: Color.secondary,
+    color: Color.primary,
     marginVertical: 10,
     fontSize: 20,
   },
@@ -89,6 +105,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     justifyContent: "space-between",
+    
   },
   expense: {
       backgroundColor: 'red',

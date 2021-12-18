@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import TextColor from "../constants/TextColor";
 
 const IncomeItem = (props) => {
   return (
@@ -14,16 +15,27 @@ export default IncomeItem;
 
 const styles = StyleSheet.create({
   listItem: {
-    // borderWidth: 3,
-    // borderColor: 'black',
     flexDirection: "row",
-    justifyContent: "space-between",
+    borderRadius: 7,
+    height: 50,
+    marginVertical: 5,
+    alignItems : 'center',
+    borderColor : '#0af58b',
+    backgroundColor : '#0af58b',
   },
   amt: {
-    alignItems: "flex-start",
+    // alignItems: "flex-start",
+    width : '50%',
+    color: '#1e4b70',
+    fontWeight: '700',
+    fontSize: 30,
   },
   desc: {
-    alignItems: "flex-end",
+    // alignItems: "flex-end",
+    width : '50%',
+    color: '#1e4b70',
+    fontWeight: '500',
+    fontSize: 23,
     
   },
 });

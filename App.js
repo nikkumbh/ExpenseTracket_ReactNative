@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, FlatList } from "react-native";
 import ExpenseItem from "./Components/ExpenseItem.js";
 import IncomeItem from "./Components/IncomeItem";
 import Input from "./Components/Input.js";
+import Header from "./Components/Header.js";
+import Color from "./constants/Color.js";
+import TextColor from "./constants/TextColor.js";
 
 export default function App() {
   const [exp, setExp] = useState();
@@ -23,6 +26,7 @@ export default function App() {
       ...currentState,
       { desc: enteredDescription, amt: amount },
     ]);
+    // setAmount("");
   };
 
   useEffect(() => {
@@ -40,12 +44,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headingContainer}>
-      <Text style={styles.heading}>EXPENSE TRACKER</Text>
-      </View>
+      <Header />
       <View style={styles.textContainer}>
-        <Text style= {styles.amountText}>Amount Left: {inc - exp} </Text>
-        <Text style= {styles.expenditureText}>Total Expenses: {exp} </Text>
+        <Text style= {styles.amountText}>Amount Left:<Text style={{fontWeight: '500'}}>  {inc - exp}</Text></Text>
+        <Text style= {styles.expenditureText}>Expenses:<Text style={{fontWeight: '500' }}> {exp} </Text></Text>
       </View>
 
       <Input funcAsPropsExp={handleExpense} funcAsPropsInc={handleIncome} />
@@ -76,21 +78,14 @@ export default function App() {
 const styles = StyleSheet.create({
 
   container: {
-    marginTop: 40,
-    paddingTop: 10,
+    // marginTop: 10,
+    // paddingTop: 10,
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: '#BBFDFC',
-  },
-  headingContainer: {
-    borderBottomWidth: 3,
-    marginBottom : 40,
-  },
-  heading: {
-    // borderBottomWidth: 5,
-    fontSize: 30,
+    // backgroundColor: '#EEEEEE',
+    backgroundColor: Color.primary,
   },
   textContainer: {
     width: '100%',
@@ -106,6 +101,9 @@ const styles = StyleSheet.create({
     left: 10,
     right: 270,
     textAlign : 'center',
+    //color: TextColor.first,
+    color: '#0af58b',
+    fontWeight: '800',
   },
   expenditureText: {
     fontSize: 20,
@@ -113,35 +111,46 @@ const styles = StyleSheet.create({
     right: 10,
     left: 250,
     textAlign : 'center',
+    //color: TextColor.first,
+    color: '#ff1717',
+    fontWeight: '800',
   },
   listContainer: {
     flex: 3,
     flexDirection: 'row',
     width: "100%",
     justifyContent : 'space-around',
-    borderTopWidth: 3,
+    // borderTopWidth: 3,
     marginVertical: 10,
   },
   expenseText: {
     fontSize: 20,
-    fontStyle : 'italic'
+    fontStyle : 'italic',
+    color: TextColor.first,
+    fontWeight : 'bold',
+    marginBottom : 10,
+    // borderWidth: 3,s
   },
   incomeText: {
     fontSize: 20,
-    fontStyle : 'italic'
+    fontStyle : 'italic',
+    color: TextColor.first,
+    fontWeight : 'bold',
+    marginBottom : 10,
   },
   incomeContainer: {
     width: '48%',
     marginTop: 10,
-    borderLeftWidth: 2,
     paddingLeft: 5,
     alignItems : 'center',
+    borderLeftColor : 'white',
   
   },
   expenseContainer: {
     marginTop: 10,
     width: '45%',
     alignItems: 'center',
+    // borderWidth: 3,
 
   },
 });
