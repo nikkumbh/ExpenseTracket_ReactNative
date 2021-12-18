@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
   desc: {
     // borderWidth: 3,
     textAlign: 'center',
-    color: '#0af58b',
+    //color: '#0af58b',
+    color: 'white',
     fontWeight: '500',
     fontSize: 18,
     marginTop: -45,

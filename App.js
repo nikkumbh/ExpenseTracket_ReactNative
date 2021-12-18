@@ -122,11 +122,12 @@ const styles = StyleSheet.create({
     justifyContent : 'space-around',
     borderWidth: 3,
     marginVertical: 10,
-    
     backgroundColor: 'white',
     borderRadius: 8,
+    paddingBottom: 10,
   },
   expenseText: {
+    marginTop: 10,
     fontSize: 20,
     fontStyle : 'italic',
     color: TextColor.first,
@@ -135,6 +136,7 @@ const styles = StyleSheet.create({
     // borderWidth: 3,s
   },
   incomeText: {
+    marginTop: 10,
     fontSize: 20,
     fontStyle : 'italic',
     color: TextColor.first,
@@ -148,15 +150,20 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     borderLeftColor : 'white',
     shadowColor: 'black',
-    shadowOpacity: 0.6,
+    shadowOpacity: 0.4,
     borderWidth: 3,
     backgroundColor: Color.ternary,
   
   },
   expenseContainer: {
+    width: '48%',
     marginTop: 10,
-    width: '45%',
-    alignItems: 'center',
+    paddingLeft: 5,
+    alignItems : 'center',
+    borderLeftColor : 'white',
+    shadowColor: 'black',
+    shadowOpacity: 0.4,
+    borderWidth: 3,
     backgroundColor: Color.ternary,
     // borderWidth: 3,
 

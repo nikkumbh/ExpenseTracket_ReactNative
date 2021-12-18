@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Color from "../constants/Color";
 import TextColor from "../constants/TextColor";
 
 const ExpenseItem = (props) => {
@@ -19,29 +20,29 @@ export default ExpenseItem;
 
 const styles = StyleSheet.create({
   listItem: {
-    flexDirection: "row",
+    borderWidth: 3,
+    minWidth: '80%',
     borderRadius: 7,
-    // height: 80,
-    height: 'auto',
+    height: 100,
     marginVertical: 5,
-    alignItems: "center",
-    borderColor: "#ff1717",
-    backgroundColor: "#ff1717",
-    justifyContent: 'center',
+    alignItems : 'center',
+    backgroundColor : Color.primary,
   },
   amt: {
-    // alignItems: "flex-start",
-    width: "40%",
-    color: "#1e4b70",
+    color: "#ff1717",
     fontWeight: "700",
-    fontSize: 30,
-    // borderWidth: 3,
+    fontSize: 25,
+    marginBottom: 50,
+    textAlign: 'center',
+    marginTop: 10,
   },
   desc: {
-    width: "50%",
-    color: "#1e4b70",
+    textAlign: 'center',
+    //color: "#ff1717",
+    color: "white",
     fontWeight: "500",
-    fontSize: 23,
-    // borderWidth: 3,
+    fontSize: 18,
+    marginTop: -45,
+    padding: 5,
   },
 });
