@@ -118,10 +118,12 @@ const styles = StyleSheet.create({
   listContainer: {
     flex: 3,
     flexDirection: 'row',
-    width: "100%",
+    width: "98%",
     justifyContent : 'space-around',
-    // borderTopWidth: 3,
+    borderWidth: 3,
     marginVertical: 10,
+    backgroundColor: Color.ternary,
+    borderRadius: 8,
   },
   expenseText: {
     fontSize: 20,
@@ -144,6 +146,9 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     alignItems : 'center',
     borderLeftColor : 'white',
+    shadowColor: 'black',
+    shadowOpacity: 0.6,
+    borderWidth: 3,
   
   },
   expenseContainer: {
