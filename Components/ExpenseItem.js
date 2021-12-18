@@ -20,7 +20,7 @@ export default ExpenseItem;
 
 const styles = StyleSheet.create({
   listItem: {
-    borderWidth: 3,
+    //borderWidth: 3,
     minWidth: '80%',
     borderRadius: 7,
     height: 100,
@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
     backgroundColor : Color.primary,
   },
   amt: {
-    color: "#ff1717",
+    //color: "#ff1717",
+    color: "white",
     fontWeight: "700",
     fontSize: 25,
     marginBottom: 50,

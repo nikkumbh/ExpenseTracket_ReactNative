@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, View, TextInput, Button } from "react-native";
+import { TouchableWithoutFeedback } from "react-native-web";
 import Color from "../constants/Color";
 
 
@@ -22,6 +23,7 @@ const Input = (props) => {
           <TextInput
             placeholder="Enter Amount"
             value={amount}
+            placeholderTextColor="white"
             onChangeText={handleAmount}
             keyboardType="numeric"
             style={styles.amount}
@@ -30,6 +32,8 @@ const Input = (props) => {
         <View style={styles.descriptionContainer}>
         <TextInput
           placeholder="Enter Description"
+          placeholderTextColor="white"
+          textAlign="center"
           value={enteredDescription}
           onChangeText={handleDescription}
           style={styles.description}
@@ -78,8 +82,9 @@ const styles = StyleSheet.create({
   amount: {
     marginTop: 15,
     borderWidth: 2,
-    borderColor: Color.secondary,
-    color: Color.primary,
+    //borderColor: Color.secondary,
+    //color: Color.primary,
+    color: 'white',
     borderRadius: 10,
     height: 40,
     width: "45%",
@@ -96,9 +101,10 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginBottom: 10,
     borderBottomWidth: 2,
-    borderColor: Color.secondary,
-    color: Color.primary,
+    // borderColor: Color.secondary,
+    // color: Color.primary,
     marginVertical: 10,
+    color: "white",
     fontSize: 20,
   },
   buttonContainer: {

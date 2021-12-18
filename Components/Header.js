@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         marginTop: 35,
         fontWeight:"bold",
-        color:Color.primary
+        //color:Color.primary
+        color: "white",
       },
 })
