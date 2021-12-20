@@ -6,6 +6,7 @@ import Input from "./Components/Input.js";
 import Header from "./Components/Header.js";
 import Color from "./constants/Color.js";
 import TextColor from "./constants/TextColor.js";
+import PieCharts from "./Components/PieCharts.js";
 
 export default function App() {
   const [exp, setExp] = useState();
@@ -43,6 +44,10 @@ export default function App() {
   });
 
   return (
+    // <View>
+    //   <PieCharts />
+    // </View>
+    
     <View style={styles.container}>
       <Header />
       <View style={styles.textContainer}>
