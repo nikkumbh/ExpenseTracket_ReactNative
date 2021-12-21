@@ -155,7 +155,6 @@ const styles = StyleSheet.create({
     margin: 2,
     paddingLeft: 5,
     alignItems : 'center',
-    //borderColor: 'white',
     borderRightColor : 'white',
     shadowColor: 'black',
     shadowOpacity: 0.4,
@@ -164,16 +163,15 @@ const styles = StyleSheet.create({
   
   },
   expenseContainer: {
-    width: '50%',
+    width: '51%',
     margin: 2,
     paddingLeft: 5,
     alignItems : 'center',
     borderLeftColor : 'white',
     shadowColor: 'black',
     shadowOpacity: 0.4,
-    borderWidth: 1,
+     borderWidth: 1,
     backgroundColor: Color.ternary,
-    // borderWidth: 3,
 
   },
 });
