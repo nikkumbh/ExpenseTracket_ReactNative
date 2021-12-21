@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Color from "../constant/Color";
+import Navigation from "../screens/Navigation";
 
 const Footer = () => {
   return (
     <View style={styles.footerContainer}>
+      <Navigation />
       {/*<Text style={styles.footer}>Footer</Text>*/}
     </View>
   );
