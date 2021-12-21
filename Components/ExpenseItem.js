@@ -1,17 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Color from "../constants/Color";
-import TextColor from "../constants/TextColor";
+import Color from "../constant/Color";
+// import TextColor from "../constants/TextColor";
 
 const ExpenseItem = (props) => {
   return (
     <View style={styles.listItem}>
       <Text style={styles.amt}>{props.data.amt}</Text>
-      
-        <Text style={{...styles.desc}}>
-          {/*console.log(props)*/}
-          {props.data.desc}
-        </Text>
+      <Text style={{ ...styles.desc }}>{props.data.desc}</Text>
+      {props.data.category === "expense" ? (
+        <Text style={styles.exp}>Expense</Text>
+      ) : (
+        <Text style={styles.inc}>Income</Text>
+      )}
     </View>
   );
 };
@@ -20,30 +21,68 @@ export default ExpenseItem;
 
 const styles = StyleSheet.create({
   listItem: {
-    //borderWidth: 3,
-    minWidth: '80%',
-    borderRadius: 7,
-    height: 100,
+    width: "100%",
+    minWidth: "80%",
+    borderRadius: 10,
     marginVertical: 5,
-    alignItems : 'center',
-    backgroundColor : Color.primary,
+    alignItems: "center",
+    backgroundColor: Color.primary,
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    marginVertical: 10,
+    flexWrap: "wrap",
+    //borderWidth: 3,
   },
   amt: {
-    //color: "#ff1717",
-    color: "white",
-    fontWeight: "700",
-    fontSize: 25,
-    marginBottom: 50,
-    textAlign: 'center',
-    marginTop: 10,
+    color: Color.black,
+    borderRadius: 10,
+    fontWeight: "500",
+    fontSize: 15,
+    textAlign: "center",
+    backgroundColor: Color.white,
+    padding: 10,
+    borderRadius: 10,
+    fontWeight: "600",
+    elevation: 5,
+    minWidth: "20%",
   },
   desc: {
-    textAlign: 'center',
-    //color: "#ff1717",
-    color: "white",
+    elevation: 5,
+    borderRadius: 10,
+    color: Color.black,
     fontWeight: "500",
-    fontSize: 18,
-    marginTop: -45,
-    padding: 5,
+    fontSize: 15,
+    textAlign: "center",
+    backgroundColor: Color.white,
+    padding: 10,
+    borderRadius: 10,
+    fontWeight: "600",
+    minWidth: "50%",
+  },
+  exp: {
+    elevation: 5,
+    color: "red",
+    fontWeight: "500",
+    borderRadius: 10,
+    fontSize: 15,
+    textAlign: "center",
+    backgroundColor: Color.white,
+    padding: 10,
+    borderRadius: 10,
+    fontWeight: "600",
+    minWidth: "21%",
+  },
+  inc: {
+    elevation: 5,
+    color: "green",
+    fontWeight: "500",
+    fontSize: 15,
+    borderRadius: 3,
+    textAlign: "center",
+    backgroundColor: Color.white,
+    padding: 10,
+    borderRadius: 10,
+    fontWeight: "600",
+    minWidth: "21%",
   },
 });
