@@ -6,7 +6,7 @@ import Navigation from "../screens/Navigation";
 const Footer = () => {
   return (
     <View style={styles.footerContainer}>
-      <Navigation />
+      {/* <Navigation /> */}
       {/*<Text style={styles.footer}>Footer</Text>*/}
     </View>
   );
