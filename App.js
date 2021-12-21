@@ -51,14 +51,14 @@ export default function App() {
   });
 
   return (
-    <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={30}>
+    <View style={styles.container}>
       <Header />
       <View style={styles.textContainer}>
         <View style={styles.incomeContainer}>
           <Text style={styles.amountText}>Amount Left:</Text>
           <Text
             style={{
-              fontWeight: "900",
+              //fontWeight: "bold",
               color: Color.black,
               backgroundColor: Color.white,
               minWidth: "30%",
@@ -76,7 +76,7 @@ export default function App() {
           <Text style={styles.expenditureText}>Expenses:</Text>
           <Text
             style={{
-              fontWeight: "900",
+              //fontWeight: "900",
               color: Color.black,
               backgroundColor: Color.white,
               minWidth: "30%",
@@ -141,7 +141,7 @@ export default function App() {
         </View>
       </View>
       <Footer />
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 
@@ -156,6 +156,7 @@ const styles = StyleSheet.create({
   textContainer: {
     width: "100%",
     justifyContent: "space-between",
+    // borderWidth: 3,
   },
   incomeContainer: {
     flexDirection: "row",
