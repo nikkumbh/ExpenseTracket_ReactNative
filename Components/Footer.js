@@ -7,6 +7,7 @@ const Footer = () => {
   return (
     <View style={styles.footerContainer}>
       {/* <Navigation /> */}
+      
       {/*<Text style={styles.footer}>Footer</Text>*/}
     </View>
   );
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.header,
     justifyContent: "center",
     height: 60,
+    borderWidth: 5,
   },
   footer: {
     elevation: 10,
@@ -29,4 +31,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
+  
 });

@@ -11,6 +11,7 @@ import Input from "./Components/Input.js";
 import Header from "./Components/Header.js";
 import Color from "./constant/Color.js";
 import Footer from "./Components/Footer.js";
+import { AntDesign } from '@expo/vector-icons';
 // import TextColor from "./constants/TextColor.js";
 
 export default function App() {
@@ -94,7 +95,6 @@ export default function App() {
       <Input funcAsPropsExp={handleExpense} funcAsPropsInc={handleIncome} />
 
       <View style={styles.listContainer}>
-        <View style={styles.expenseListContainer}>
           <View
             style={{
               display: "flex",
@@ -138,7 +138,16 @@ export default function App() {
             data={storeItems}
             renderItem={(itemData) => <ExpenseItem data={itemData.item} />}
           />
-        </View>
+        
+        {/* <View style = {styles.plusButton}> */}
+      
+      </View>
+      <View style={styles.buttonContainer}>
+      <AntDesign 
+      name="pluscircleo" 
+      size={35} color="white"
+      onPress={}
+      />
       </View>
       <Footer />
     </View>
@@ -187,9 +196,14 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "98%",
     justifyContent: "space-around",
-    // borderWidth: 3,
+    //borderWidth: 3,
     marginVertical: 10,
     // backgroundColor: "white",
     // borderRadius: 8,
   },
+  buttonContainer:{
+    marginLeft: 300,
+    padding: 10,
+    // borderWidth: 3,
+  }
 });
