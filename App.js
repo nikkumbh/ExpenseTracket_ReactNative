@@ -138,7 +138,8 @@ export default function App() {
             data={storeItems}
             renderItem={(itemData) => <ExpenseItem data={itemData.item} />}
           />
-        
+        {/* hello */}
+
         {/* <View style = {styles.plusButton}> */}
       
       </View>
@@ -147,6 +148,7 @@ export default function App() {
       name="pluscircleo" 
       size={35} color="white"
       onPress={}
+      
       />
       </View>
       <Footer />
