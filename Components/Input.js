@@ -109,11 +109,4 @@ const styles = StyleSheet.create({
     borderColor: Color.red,
     borderRadius: 10,
   },
-  // incomeBtn: {
-  //   // backgroundColor:Color.lightYellow,
-  //   borderWidth: 10,
-  //   borderRadius: 5,
-  //   color: 'black',
-  //   // color: Color.lightYellow,
-  // },
 });

@@ -20,6 +20,15 @@ export default function App() {
 
   const handleExpense = (amount, enteredDescription) => {
     console.log("Expense clicked!");
+    if(amount === "" ||enteredDescription === ""|| isNaN(amount) || amount<0){
+      alert("Error in amount or description");
+      return;
+    }
+    if(inc - exp < amount){
+      
+   alert("Not enough balance")
+      return;
+    }
     setStoreItems((currentState) => [
       ...currentState,
       { desc: enteredDescription, amt: amount, category: "expense" },
@@ -27,6 +36,10 @@ export default function App() {
   };
   const handleIncome = (amount, enteredDescription) => {
     console.log("Income clicked!");
+    if(amount === "" ||enteredDescription === ""|| isNaN(amount) || amount<0){
+      alert("Error in amount or description");
+      return;
+    }
     setStoreItems((currentState) => [
       ...currentState,
       { desc: enteredDescription, amt: amount, category: "income" },
@@ -50,7 +63,7 @@ export default function App() {
 
   return (
     <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={30}>
-      <StatusBar style="black" />
+      <StatusBar style="light" />
       <Header />
       <View style={styles.textContainer}>
         <View style={styles.incomeContainer}>
@@ -178,6 +191,7 @@ const styles = StyleSheet.create({
 
   listContainer: {
     flex: 3,
+    marginTop:25,
     flexDirection: "row",
     width: "98%",
     justifyContent: "space-around",
