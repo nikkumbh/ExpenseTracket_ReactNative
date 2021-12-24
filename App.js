@@ -20,13 +20,23 @@ export default function App() {
 
   const handleExpense = (amount, enteredDescription) => {
     console.log("Expense clicked!");
-    if(amount === "" ||enteredDescription === ""|| isNaN(amount) || amount<0){
-      alert("Error in amount or description");
+    if(amount ==="" || enteredDescription === ""){
+      alert("Input's can't be empty")
       return;
     }
-    if(inc - exp < amount){
-      
-   alert("Not enough balance")
+    else if (amount === "") {
+      alert("Amount can't be empty!");
+      return;
+    } else if (enteredDescription === "") {
+      alert("Description can't be empty");
+      return;
+    } else if (isNaN(amount) || amount < 0) {
+      alert("Entered amount is Invalid!");
+      return;
+    }
+
+    if (inc - exp < amount) {
+      alert("Not enough balance");
       return;
     }
     setStoreItems((currentState) => [
@@ -36,8 +46,18 @@ export default function App() {
   };
   const handleIncome = (amount, enteredDescription) => {
     console.log("Income clicked!");
-    if(amount === "" ||enteredDescription === ""|| isNaN(amount) || amount<0){
-      alert("Error in amount or description");
+    if(amount ==="" || enteredDescription === ""){
+      alert("Input's can't be empty")
+      return;
+    }
+    else if (amount === "") {
+      alert("Amount can't be empty!");
+      return;
+    } else if (enteredDescription === "") {
+      alert("Description can't be empty");
+      return;
+    } else if (isNaN(amount) || amount < 0) {
+      alert("Entered amount is Invalid!");
       return;
     }
     setStoreItems((currentState) => [
@@ -135,7 +155,9 @@ export default function App() {
             >
               Description
             </Text>
-            <View style={{ minWidth: "30%", textAlign: "center" , marginTop: 5}}>
+            <View
+              style={{ minWidth: "30%", textAlign: "center", marginTop: 5 }}
+            >
               <Text style={{ color: "red", minWidth: "30%" }}>
                 Expense / <Text style={{ color: "green" }}>Income </Text>
               </Text>
@@ -186,13 +208,13 @@ const styles = StyleSheet.create({
   expenditureText: {
     fontSize: 20,
     textAlign: "center",
-    color: "white", 
+    color: "white",
     fontWeight: "bold",
   },
 
   listContainer: {
     flex: 3,
-    marginTop:25,
+    marginTop: 25,
     flexDirection: "row",
     width: "98%",
     justifyContent: "space-around",
