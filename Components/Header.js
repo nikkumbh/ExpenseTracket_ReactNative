@@ -1,15 +1,15 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import Color from '../constants/Color'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import Color from "../constant/Color";
 const Header = () => {
-    return (
-        <View style={styles.headingContainer}>
+  return (
+    <View style={styles.headingContainer}>
       <Text style={styles.heading}>EXPENSE TRACKER</Text>
-      </View>
-    )
-}
+    </View>
+  );
+};
 
-export default Header
+export default Header;
 
 const styles = StyleSheet.create({
     headingContainer: {
@@ -29,3 +29,4 @@ const styles = StyleSheet.create({
         color: 'white',
       },
 })
+
