@@ -6,19 +6,16 @@ import {
   FlatList,
   KeyboardAvoidingView,
 } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import ExpenseItem from "./Components/ExpenseItem.js";
 import Input from "./Components/Input.js";
 import Header from "./Components/Header.js";
 import Color from "./constant/Color.js";
 import Footer from "./Components/Footer.js";
-import { AntDesign } from '@expo/vector-icons';
-// import TextColor from "./constants/TextColor.js";
 
 export default function App() {
   const [exp, setExp] = useState();
   const [inc, setInc] = useState();
-  // const [storeExpense, setStoreExpense] = useState([]);
-  // const [storeIncome, setStoreIncome] = useState([]);
   const [storeItems, setStoreItems] = useState([]);
 
   const handleExpense = (amount, enteredDescription) => {
@@ -52,14 +49,14 @@ export default function App() {
   });
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView style={styles.container} keyboardVerticalOffset={30}>
+      <StatusBar style="black" />
       <Header />
       <View style={styles.textContainer}>
         <View style={styles.incomeContainer}>
           <Text style={styles.amountText}>Amount Left:</Text>
           <Text
             style={{
-              //fontWeight: "bold",
               color: Color.black,
               backgroundColor: Color.white,
               minWidth: "30%",
@@ -77,7 +74,6 @@ export default function App() {
           <Text style={styles.expenditureText}>Expenses:</Text>
           <Text
             style={{
-              //fontWeight: "900",
               color: Color.black,
               backgroundColor: Color.white,
               minWidth: "30%",
@@ -95,6 +91,7 @@ export default function App() {
       <Input funcAsPropsExp={handleExpense} funcAsPropsInc={handleIncome} />
 
       <View style={styles.listContainer}>
+        <View style={styles.expenseListContainer}>
           <View
             style={{
               display: "flex",
@@ -109,8 +106,7 @@ export default function App() {
               style={{
                 width: "25%",
                 textAlign: "center",
-                color: Color.header,
-                //fontWeight: "bold",
+                color: "white",
                 fontSize: 20,
               }}
             >
@@ -120,39 +116,27 @@ export default function App() {
               style={{
                 minWidth: "40%",
                 textAlign: "center",
-                color: Color.header,
-                // fontWeight: "bold",
+                color: "white",
                 fontSize: 20,
               }}
             >
               Description
             </Text>
-            <View style={{ minWidth: "30%", textAlign: "center" }}>
+            <View style={{ minWidth: "30%", textAlign: "center" , marginTop: 5}}>
               <Text style={{ color: "red", minWidth: "30%" }}>
                 Expense / <Text style={{ color: "green" }}>Income </Text>
               </Text>
             </View>
+          </View>
           <FlatList
             keyExtractor={(item, index) => index}
             data={storeItems}
             renderItem={(itemData) => <ExpenseItem data={itemData.item} />}
           />
-          </View>
-        {/* hello */}
-
-        {/* <View style = {styles.plusButton}> */}
-      
-      </View>
-      <View style={styles.buttonContainer}>
-      <AntDesign 
-      name="pluscircleo" 
-      size={35} color="white"
-      // onPress={}
-      
-      />
+        </View>
       </View>
       <Footer />
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -182,13 +166,13 @@ const styles = StyleSheet.create({
   amountText: {
     fontSize: 20,
     textAlign: "center",
-    color: Color.yellow,
+    color: "white",
     fontWeight: "bold",
   },
   expenditureText: {
     fontSize: 20,
     textAlign: "center",
-    color: Color.header,
+    color: "white", 
     fontWeight: "bold",
   },
 
@@ -198,10 +182,6 @@ const styles = StyleSheet.create({
     width: "98%",
     justifyContent: "space-around",
     marginVertical: 10,
-    borderWidth:5,
+    backgroundColor: "#282B30",
   },
-  // buttonContainer:{
-  //   marginLeft: 300,
-  //   padding: 10,
-  // }
 });

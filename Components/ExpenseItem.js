@@ -1,8 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Color from "../constant/Color";
-//import TextColor from "../constant/TextColor";
-import TextColor from "../constant/TextColor";
+// import TextColor from "../constants/TextColor";
 
 const ExpenseItem = (props) => {
   return (
@@ -32,30 +31,28 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     marginVertical: 10,
     flexWrap: "wrap",
-    // borderWidth: 3,
   },
   amt: {
-    color: Color.black,
+    color: "white",
     borderRadius: 10,
     fontWeight: "500",
     fontSize: 15,
     textAlign: "center",
-    backgroundColor: Color.white,
+    backgroundColor: Color.grey,
     padding: 10,
     borderRadius: 10,
     fontWeight: "600",
     elevation: 5,
     minWidth: "20%",
-    // borderWidth: 3,
   },
   desc: {
     elevation: 5,
     borderRadius: 10,
-    color: Color.black,
+    color: "white",
     fontWeight: "500",
     fontSize: 15,
     textAlign: "center",
-    backgroundColor: Color.white,
+    backgroundColor: Color.grey,
     padding: 10,
     borderRadius: 10,
     fontWeight: "600",
@@ -68,12 +65,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontSize: 15,
     textAlign: "center",
-    backgroundColor: Color.white,
+    backgroundColor: Color.grey,
     padding: 10,
     borderRadius: 10,
     fontWeight: "600",
     minWidth: "21%",
-    // borderWidth: 6,
+
   },
   inc: {
     elevation: 5,
@@ -82,7 +79,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     borderRadius: 3,
     textAlign: "center",
-    backgroundColor: Color.white,
+    backgroundColor: Color.grey,
     padding: 10,
     borderRadius: 10,
     fontWeight: "600",

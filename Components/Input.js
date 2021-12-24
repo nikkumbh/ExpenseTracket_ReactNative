@@ -40,8 +40,7 @@ const Input = (props) => {
           <Button
             title="Expense"
             style={styles.expenseBtn}
-            color={Color.lightPurple}
-            backgroundColor={Color.lightPurple}
+            color={Color.red}
             onPress={() => props.funcAsPropsExp(amount, enteredDescription)}
           />
         </View>
@@ -51,8 +50,7 @@ const Input = (props) => {
             title="Income"
             style={styles.incomeBtn}
             
-            color={Color.lightYellow}
-            backgroundColor={Color.lightYellow}
+            color={Color.green}
             onPress={() => props.funcAsPropsInc(amount, enteredDescription)}
           />
         </View>
@@ -100,25 +98,22 @@ const styles = StyleSheet.create({
     //borderWidth: 3,
   },
   income: {
-    borderWidth: 5,
-    borderColor: Color.yellow,
+    borderWidth: 3,
+    borderColor: Color.green,
     borderRadius: 10,
    //backgroundColor:Color.lightYellow,
     
   },
   expense: {
-    borderWidth: 5,
-    borderColor: Color.header,
+    borderWidth: 3,
+    borderColor: Color.red,
     borderRadius: 10,
   },
-  incomeBtn: {
-    // backgroundColor:Color.lightYellow,
-    borderWidth: 10,
-    borderRadius: 5,
-    color: 'black',
-    // color: Color.lightYellow,
-  },
-  expenseBtn: {
-    backgroundColor:Color.lightPurple,
-  },
+  // incomeBtn: {
+  //   // backgroundColor:Color.lightYellow,
+  //   borderWidth: 10,
+  //   borderRadius: 5,
+  //   color: 'black',
+  //   // color: Color.lightYellow,
+  // },
 });
