@@ -111,14 +111,14 @@ const styles = StyleSheet.create({
     borderColor: Color.header,
     borderRadius: 10,
   },
-  // incomeBtn: {
-  //   // backgroundColor:Color.lightYellow,
-  //   borderWidth: 10,
-  //   borderRadius: 5,
-  //   color: 'black',
-  //   // color: Color.lightYellow,
-  // },
-  // expenseBtn: {
-  //   backgroundColor:Color.lightPurple,
-  // },
+  incomeBtn: {
+    // backgroundColor:Color.lightYellow,
+    borderWidth: 10,
+    borderRadius: 5,
+    color: 'black',
+    // color: Color.lightYellow,
+  },
+  expenseBtn: {
+    backgroundColor:Color.lightPurple,
+  },
 });

@@ -132,12 +132,12 @@ export default function App() {
                 Expense / <Text style={{ color: "green" }}>Income </Text>
               </Text>
             </View>
-          </View>
           <FlatList
             keyExtractor={(item, index) => index}
             data={storeItems}
             renderItem={(itemData) => <ExpenseItem data={itemData.item} />}
           />
+          </View>
         {/* hello */}
 
         {/* <View style = {styles.plusButton}> */}
@@ -147,7 +147,7 @@ export default function App() {
       <AntDesign 
       name="pluscircleo" 
       size={35} color="white"
-      onPress={}
+      // onPress={}
       
       />
       </View>
@@ -167,7 +167,6 @@ const styles = StyleSheet.create({
   textContainer: {
     width: "100%",
     justifyContent: "space-between",
-    // borderWidth: 3,
   },
   incomeContainer: {
     flexDirection: "row",
@@ -198,14 +197,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "98%",
     justifyContent: "space-around",
-    //borderWidth: 3,
     marginVertical: 10,
-    // backgroundColor: "white",
-    // borderRadius: 8,
+    borderWidth:5,
   },
-  buttonContainer:{
-    marginLeft: 300,
-    padding: 10,
-    // borderWidth: 3,
-  }
+  // buttonContainer:{
+  //   marginLeft: 300,
+  //   padding: 10,
+  // }
 });

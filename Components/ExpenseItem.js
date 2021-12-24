@@ -1,7 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Color from "../constant/Color";
-// import TextColor from "../constants/TextColor";
+//import TextColor from "../constant/TextColor";
+import TextColor from "../constant/TextColor";
 
 const ExpenseItem = (props) => {
   return (
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
     marginVertical: 10,
     flexWrap: "wrap",
-    //borderWidth: 3,
+    // borderWidth: 3,
   },
   amt: {
     color: Color.black,
@@ -45,6 +46,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     elevation: 5,
     minWidth: "20%",
+    // borderWidth: 3,
   },
   desc: {
     elevation: 5,
@@ -71,6 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     fontWeight: "600",
     minWidth: "21%",
+    // borderWidth: 6,
   },
   inc: {
     elevation: 5,
